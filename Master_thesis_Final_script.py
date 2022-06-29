@@ -83,36 +83,36 @@ def preprocess_Indiv_burner_T_P_sans_SULP(df,rm = False,form = 2):
         SGT750 = SGT750[(SGT750.filter(regex = 'Flame_on/off').sum(axis=1)==0) | (SGT750.filter(regex = 'Flame_on/off').sum(axis=1)==8)]
     else:
         pass    
-    Burner1 = SGT750.loc[:,['MBM10CQ005_XE01_Burner 1 Flame_on/off','MBM10CP005_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP005_XE02_Low Frequency Pulsation_mbar','MBM10CP005_XE03_Medium Frequency Pulsation_mbar',
-'MBM10CP005_XE04_High Frequency Pulsation_mbar','MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C','MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner2 = SGT750.loc[:,['MBM10CQ010_XE01_Burner 2 Flame_on/off','MBM10CP010_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP010_XE02_Low Frequency Pulsation_mbar','MBM10CP010_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP010_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner3 = SGT750.loc[:,['MBM10CQ015_XE01_Burner 3 Flame_on/off','MBM10CP015_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP015_XE02_Low Frequency Pulsation_mbar','MBM10CP015_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP015_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner4 = SGT750.loc[:,['MBM10CQ020_XE01_Burner 4 Flame_on/off','MBM10CP020_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP020_XE02_Low Frequency Pulsation_mbar','MBM10CP020_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP020_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner5 = SGT750.loc[:,['MBM10CQ025_XE01_Burner 5 Flame_on/off','MBM10CP025_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP025_XE02_Low Frequency Pulsation_mbar','MBM10CP025_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP025_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner6 = SGT750.loc[:,['MBM10CQ030_XE01_Burner 6 Flame_on/off','MBM10CP030_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP030_XE02_Low Frequency Pulsation_mbar','MBM10CP030_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP030_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner7 = SGT750.loc[:,['MBM10CQ035_XE01_Burner 7 Flame_on/off','MBM10CP035_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP035_XE02_Low Frequency Pulsation_mbar','MBM10CP035_XE03_Medium Frequency Pulsation_mbar',
+    Burner1 = SGT750.loc[:,['Burner 1 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP005_XE03_Medium Frequency Pulsation_mbar',
+'High Frequency Pulsation_mbar','T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C','T7 Exhaust Temp Average Ring 3_°C']]
+    Burner2 = SGT750.loc[:,['Burner 2 Flame_on/off','Ultra Low Frequency Pulsation_mbar','MBM10CP010_XE02_Low Frequency Pulsation_mbar','MBM10CP010_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner3 = SGT750.loc[:,['Burner 3 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP015_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner4 = SGT750.loc[:,['Burner 4 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP020_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner5 = SGT750.loc[:,['Burner 5 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP025_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner6 = SGT750.loc[:,['Burner 6 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP030_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner7 = SGT750.loc[:,['Burner 7 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP035_XE03_Medium Frequency Pulsation_mbar',
                             'MBM10CP035_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner8 = SGT750.loc[:,['MBM10CQ040_XE01_Burner 8 Flame_on/off','MBM10CP040_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP040_XE02_Low Frequency Pulsation_mbar','MBM10CP040_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP040_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner8 = SGT750.loc[:,['Burner 8 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','MBM10CP040_XE03_Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
     datalist = [Burner1,Burner2,Burner3,Burner4,Burner5,Burner6,Burner7,Burner8]
     dfcols = ['BurnerStatus','UltraLow_Frequency','Low_Frequency','Medium_Frequency','High_Frequency','TempRing1','TempRing2','TempRing3']
     
@@ -421,35 +421,35 @@ def preprocess_combineburner_T_P_sans_SP(df,rm = False,form = 2):
         SGT750 = SGT750[(SGT750.filter(regex = 'Flame_on/off').sum(axis=1)==0) | (SGT750.filter(regex = 'Flame_on/off').sum(axis=1)==8)]
     else:
         pass
-    Burner1 = SGT750.loc[:,['MBM10CQ005_XE01_Burner 1 Flame_on/off','MBM10CP005_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP005_XE02_Low Frequency Pulsation_mbar','MBM10CP005_XE03_Medium Frequency Pulsation_mbar','MBM10CP005_XE04_High Frequency Pulsation_mbar','MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C','MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner2 = SGT750.loc[:,['MBM10CQ010_XE01_Burner 2 Flame_on/off','MBM10CP010_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP010_XE02_Low Frequency Pulsation_mbar','MBM10CP010_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP010_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner3 = SGT750.loc[:,['MBM10CQ015_XE01_Burner 3 Flame_on/off','MBM10CP015_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP015_XE02_Low Frequency Pulsation_mbar','MBM10CP015_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP015_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner4 = SGT750.loc[:,['MBM10CQ020_XE01_Burner 4 Flame_on/off','MBM10CP020_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP020_XE02_Low Frequency Pulsation_mbar','MBM10CP020_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP020_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner5 = SGT750.loc[:,['MBM10CQ025_XE01_Burner 5 Flame_on/off','MBM10CP025_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP025_XE02_Low Frequency Pulsation_mbar','MBM10CP025_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP025_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner6 = SGT750.loc[:,['MBM10CQ030_XE01_Burner 6 Flame_on/off','MBM10CP030_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP030_XE02_Low Frequency Pulsation_mbar','MBM10CP030_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP030_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner7 = SGT750.loc[:,['MBM10CQ035_XE01_Burner 7 Flame_on/off','MBM10CP035_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP035_XE02_Low Frequency Pulsation_mbar','MBM10CP035_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP035_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
-    Burner8 = SGT750.loc[:,['MBM10CQ040_XE01_Burner 8 Flame_on/off','MBM10CP040_XE01_Ultra Low Frequency Pulsation_mbar','MBM10CP040_XE02_Low Frequency Pulsation_mbar','MBM10CP040_XE03_Medium Frequency Pulsation_mbar',
-                            'MBM10CP040_XE04_High Frequency Pulsation_mbar',
-                            'MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C','MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C',
-                            'MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']]
+    Burner1 = SGT750.loc[:,['Burner 1 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar','High Frequency Pulsation_mbar','T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C','T7 Exhaust Temp Average Ring 3_°C']]
+    Burner2 = SGT750.loc[:,['Burner 2 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner3 = SGT750.loc[:,['Burner 3 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner4 = SGT750.loc[:,['Burner 4 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner5 = SGT750.loc[:,['Burner 5 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner6 = SGT750.loc[:,['Burner 6 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner7 = SGT750.loc[:,['Burner 7 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
+    Burner8 = SGT750.loc[:,['Burner 8 Flame_on/off','Ultra Low Frequency Pulsation_mbar','Low Frequency Pulsation_mbar','Medium Frequency Pulsation_mbar',
+                            'High Frequency Pulsation_mbar',
+                            'T7 Exhaust Temp Average Ring1_°C','T7 Exhaust Temp Average Ring 2_°C',
+                            'T7 Exhaust Temp Average Ring 3_°C']]
     datalist = [Burner1,Burner2,Burner3,Burner4,Burner5,Burner6,Burner7,Burner8]
     ###combiner Fucntion
     dfcols = ['BurnerStatus','UltraLow_Frequency','Low_Frequency','Medium_Frequency','High_Frequency','TempRing1','TempRing2','TempRing3']
