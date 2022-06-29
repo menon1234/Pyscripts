@@ -41,9 +41,9 @@ def preprocessPT(data):
     # datax = data.filter(regex="^(?!$)")
     # datax = data[data.columns.drop(list(data.filter(regex='Burner')))]
     datax = data.filter(regex='Frequency Pulsation_mbar')
-    datax['ExhaustTemp_Ring1'] = data['MBB10FT923_ZE11_T7 Exhaust Temp Average Ring1_°C']
-    datax['ExhaustTemp_Ring2'] = data['MBB10FT923_ZE12_T7 Exhaust Temp Average Ring 2_°C']
-    datax['ExhaustTemp_Ring3'] = data['MBB10FT923_ZE13_T7 Exhaust Temp Average Ring 3_°C']
+    datax['ExhaustTemp_Ring1'] = data['Exhaust Temp Average Ring1_°C']
+    datax['ExhaustTemp_Ring2'] = data['Exhaust Temp Average Ring 2_°C']
+    datax['ExhaustTemp_Ring3'] = data['Exhaust Temp Average Ring 3_°C']
     # datax1 = datax[datax.columns.drop(list(datax.filter(regex='NaN')))]
     # datax1 = data.filter(regex='Ring')
     return(datay,datax)
